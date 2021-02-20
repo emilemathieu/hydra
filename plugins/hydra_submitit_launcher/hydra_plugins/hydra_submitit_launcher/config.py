@@ -51,6 +51,7 @@ class SlurmQueueConf(BaseQueueConf):
     mem_per_gpu: Optional[str] = None
     mem_per_cpu: Optional[str] = None
 
+
     # Following parameters are submitit specifics
     #
     # USR1 signal delay before timeout
@@ -68,6 +69,8 @@ class SlurmQueueConf(BaseQueueConf):
     array_parallelism: int = 256
     # A list of commands to run in sbatch befure running srun
     setup: Optional[List[str]] = None
+    # A path to python executable 
+    executable: Optional[str] = None
 
 
 @dataclass
